@@ -24,16 +24,13 @@ SESSION_NAME = os.path.join(os.getcwd(), os.getenv('SESSION_NAME', 'leak_data_se
     PORT = int(os.getenv('FLASK_PORT', '5000'))
     
     DOWNLOAD_FOLDER = os.getenv('DOWNLOAD_FOLDER', 'downloads')
-    BASE_URL = os.getenv('BASE_URL', 'https://leakcheck-backend1-production.up.railway.app
-
-
-
-')
+    BASE_URL = os.getenv('BASE_URL', 'https://leakcheck-backend1-production.up.railway.app')
     
     @staticmethod
     def create_download_dir():
         if not os.path.exists(Config.DOWNLOAD_FOLDER):
 
             os.makedirs(Config.DOWNLOAD_FOLDER)
+
 
 
