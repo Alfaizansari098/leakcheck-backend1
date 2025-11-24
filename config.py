@@ -29,8 +29,8 @@ SESSION_NAME = os.path.join(os.getcwd(), os.getenv('SESSION_NAME', 'leak_data_se
     @staticmethod
     def create_download_dir():
         if not os.path.exists(Config.DOWNLOAD_FOLDER):
-
             os.makedirs(Config.DOWNLOAD_FOLDER)
+
 
 
 
