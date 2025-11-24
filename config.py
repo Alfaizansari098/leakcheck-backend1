@@ -7,8 +7,6 @@ class Config:
     TELEGRAM_API_ID = int(os.getenv('TELEGRAM_API_ID', '0'))
     TELEGRAM_API_HASH = os.getenv('TELEGRAM_API_HASH', '')
     TELEGRAM_PHONE = os.getenv('TELEGRAM_PHONE', '')
-    SESSION_NAME = os.getenv('SESSION_NAME', 'leak_data_session')
-
     
     BOT_USERNAMES = [
         'TTMlogsBot',
@@ -19,7 +17,7 @@ class Config:
         'perimeterlog_bot'
     ]
     BOT_USERNAME = os.getenv('BOT_USERNAME', 'TTMlogsBot')
-    SESSION_NAME = os.getenv('SESSION_NAME', 'leak_data_session')
+SESSION_NAME = os.path.join(os.getcwd(), os.getenv('SESSION_NAME', 'leak_data_session'))
     
     DEBUG = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
     HOST = os.getenv('FLASK_HOST', '0.0.0.0')
@@ -33,3 +31,4 @@ class Config:
         if not os.path.exists(Config.DOWNLOAD_FOLDER):
 
             os.makedirs(Config.DOWNLOAD_FOLDER)
+
