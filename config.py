@@ -17,7 +17,7 @@ class Config:
         'perimeterlog_bot'
     ]
     BOT_USERNAME = os.getenv('BOT_USERNAME', 'TTMlogsBot')
-SESSION_NAME = os.path.join(os.getcwd(), os.getenv('SESSION_NAME', 'leak_data_session'))
+    SESSION_NAME = os.getenv('SESSION_NAME', 'leak_data_session')
     
     DEBUG = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
     HOST = os.getenv('FLASK_HOST', '0.0.0.0')
@@ -30,6 +30,7 @@ SESSION_NAME = os.path.join(os.getcwd(), os.getenv('SESSION_NAME', 'leak_data_se
     def create_download_dir():
         if not os.path.exists(Config.DOWNLOAD_FOLDER):
             os.makedirs(Config.DOWNLOAD_FOLDER)
+
 
 
 
